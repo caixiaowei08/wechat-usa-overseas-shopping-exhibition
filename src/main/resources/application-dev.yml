@@ -1,0 +1,49 @@
+####服务器启动端口
+server:
+  port: 8080
+
+####数据库连接配置
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/amazon_exhibition_service?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8mb4
+    username: root
+    password: 1q2w3e4r
+    initialSize: 10
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: falas
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    spring.datasource.filters: stat,wall,log4j
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    useGlobalDataSourceStat: true
+  thymeleaf:
+        cache: false
+        check-template: true
+        content-type: text/html
+        encoding: utf-8
+        prefix: classpath:/templates/
+        suffix: .html
+        mode: LEGACYHTML5
+
+####日志配置log4j2
+logging:
+  config: classpath:log4j2-dev.yml
+
+#####微信公众号APPID 和 APPSECRET
+officialAccount:
+    appId: wx434061d1ae4e6f80
+    appSecret: d48aa62482017cd14d5337f577405cdb
+    accountToken:
+
+
+
+
+
