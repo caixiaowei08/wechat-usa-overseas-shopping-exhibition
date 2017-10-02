@@ -18,7 +18,7 @@ public class UserEntity implements Serializable {
     /**
      *微信号
      */
-    private String wechat;
+    private String weChat;
     /**
      *手机号
      */
@@ -26,7 +26,7 @@ public class UserEntity implements Serializable {
     /**
      *用户昵称
      */
-    private String nickname;
+    private String nickName;
     /**
      *性别
      */
@@ -34,7 +34,7 @@ public class UserEntity implements Serializable {
     /**
      *城市
      */
-    private Integer city;
+    private String city;
     /**
      *国家
      */
@@ -50,7 +50,7 @@ public class UserEntity implements Serializable {
     /**
      *用户头像
      */
-    private String headimgurl;
+    private String headImgUrl;
     /**
      *关注时间
      */
@@ -58,7 +58,7 @@ public class UserEntity implements Serializable {
     /**
      *绑定编号
      */
-    private String unionid;
+    private String unionId;
     /**
      *'粉丝备注
      */
@@ -92,12 +92,12 @@ public class UserEntity implements Serializable {
         this.openId = openId;
     }
 
-    public String getWechat() {
-        return wechat;
+    public String getWeChat() {
+        return weChat;
     }
 
-    public void setWechat(String wechat) {
-        this.wechat = wechat;
+    public void setWeChat(String weChat) {
+        this.weChat = weChat;
     }
 
     public String getPhone() {
@@ -108,12 +108,12 @@ public class UserEntity implements Serializable {
         this.phone = phone;
     }
 
-    public String getNickname() {
-        return nickname;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public Integer getSex() {
@@ -124,11 +124,11 @@ public class UserEntity implements Serializable {
         this.sex = sex;
     }
 
-    public Integer getCity() {
+    public String getCity() {
         return city;
     }
 
-    public void setCity(Integer city) {
+    public void setCity(String city) {
         this.city = city;
     }
 
@@ -156,12 +156,12 @@ public class UserEntity implements Serializable {
         this.language = language;
     }
 
-    public String getHeadimgurl() {
-        return headimgurl;
+    public String getHeadImgUrl() {
+        return headImgUrl;
     }
 
-    public void setHeadimgurl(String headimgurl) {
-        this.headimgurl = headimgurl;
+    public void setHeadImgUrl(String headImgUrl) {
+        this.headImgUrl = headImgUrl;
     }
 
     public Date getSubscribeTime() {
@@ -172,12 +172,12 @@ public class UserEntity implements Serializable {
         this.subscribeTime = subscribeTime;
     }
 
-    public String getUnionid() {
-        return unionid;
+    public String getUnionId() {
+        return unionId;
     }
 
-    public void setUnionid(String unionid) {
-        this.unionid = unionid;
+    public void setUnionId(String unionId) {
+        this.unionId = unionId;
     }
 
     public String getRemark() {
@@ -211,5 +211,4 @@ public class UserEntity implements Serializable {
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
-
 }

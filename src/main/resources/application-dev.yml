@@ -7,7 +7,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/amazon_exhibition_service?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8mb4
+    url: jdbc:mysql://localhost:3306/amazon_exhibition_service?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=TRUE
     username: root
     password: 1q2w3e4r
     initialSize: 10
@@ -42,6 +42,10 @@ officialAccount:
     appId: wx434061d1ae4e6f80
     appSecret: d48aa62482017cd14d5337f577405cdb
     accountToken:
+
+
+
+
 
 
 

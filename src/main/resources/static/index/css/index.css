@@ -1,0 +1,42 @@
+*{
+
+}
+
+.menu-ul{
+    width: 100%;
+    height: 44px;
+    list-style: none;
+    padding: 0;
+    margin:0;
+    text-align: center;
+}
+
+.menu-li{
+    float: left;
+    width: 33.33%;
+    height: 44px;
+    line-height: 44px;
+    color: #888;
+}
+
+.menu-li i{
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+}
+
+.menu-li span{
+    font-size: 8px;
+    display: block;
+    line-height: 10px;
+}
+
+.menu-li a:link,a:visited,a:hover,a:active{
+    text-decoration: none;
+    color: #888;
+}
+
+.active{
+    color: #23ad20 !important;
+}

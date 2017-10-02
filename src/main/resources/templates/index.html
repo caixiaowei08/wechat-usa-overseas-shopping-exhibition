@@ -1,43 +1,48 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
-      lang="en">
+      lang="zh-CN">
 <head>
     <title>易购环球</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" th:href="@{plug-in/weui/lib/weui.min.css}"/>
+    <link rel="stylesheet" th:href="@{plug-in/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{plug-in/font-awesome/css/font-awesome.min.css}"/>
     <link rel="stylesheet" th:href="@{plug-in/weui/css/jquery-weui.min.css}"/>
-    <script th:src="@{plug-in/weui/lib/jquery-2.1.4.js}"></script>
-    <script th:src="@{plug-in/weui/js/jquery-weui.min.js}"></script>
+    <link rel="stylesheet" th:href="@{index/css/index.css}"/>
+    <script th:src="@{plug-in/jquery/jquery.min.js}"></script>
     <script th:src="@{plug-in/angular/angular.min.js}"></script>
     <script th:src="@{plug-in/angular/angular-route.min.js}"></script>
+    <script th:src="@{plug-in/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{index/js/index.js}"></script>
 </head>
-<body ng-app='routingOfficialAccounts'>
-<div>
-    <div ng-view></div>
-    <div class="weui-tabbar">
-        <a href="#/" class="weui-tabbar__item weui-bar__item--on">
-            <p class="weui-tabbar__label">推广产品</p>
-        </a>
-        <a href="#/collection" class="weui-tabbar__item">
-            <p class="weui-tabbar__label">我的收藏</p>
-        </a>
-        <a href="#/group" class="weui-tabbar__item">
-            <p class="weui-tabbar__label">微群交流</p>
-        </a>
+<body ng-app='routerShoppingExhibition'>
+<div class="container-fluid">
+    <div ng-view>
     </div>
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <ul class="menu-ul">
+            <li class="menu-li">
+                <a href="#/product" id="product">
+                    <i class="fa fa-server"></i>
+                    <span>产品</span>
+                </a>
+            </li>
+            <li class="menu-li">
+                <a href="#/collection" id="collection">
+                    <i class="fa fa-shopping-bag"></i>
+                    <span>收藏</span>
+                </a>
+            </li>
+            <li class="menu-li">
+                <a href="#/group" id="group">
+                    <i class="fa fa-weixin"></i>
+                    <span>微群</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </div>
-<script>
-    angular.module('routingOfficialAccounts', ['ngRoute'])
-        .config(['$routeProvider', function ($routeProvider) {
-            $routeProvider
-                .when('/', {templateUrl: 'product'})
-                .when('/collection', {templateUrl: 'collection'})
-                .when('/group', {templateUrl: 'group'})
-                .otherwise({redirectTo: '/'});
-        }]);
-</script>
 </body>
 </html>
